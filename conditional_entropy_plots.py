@@ -63,5 +63,5 @@ make_subplot(axs[1], X, Y, Z2,'uniform')
 make_subplot(axs[2], X, Y, Z3,'log-uniform')
 
 plt.tight_layout()
-plt.savefig('conditional_entropy.pdf',bbox_inches='tight')
+plt.savefig('conditional_entropy.png',bbox_inches='tight')
 plt.show()
