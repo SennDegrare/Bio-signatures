@@ -60,14 +60,16 @@ def make_subplot_c(ax,X,Y,Z,title='',whitedash=True):
 make_subplot_c(axs,Xc,Yc,Zc,title='p(N>0|null),  $p^*=.5$,  $N^*=10$')
 
 for n,c,d,a in survey:
-    print(n,c)
+    #print(c,n)
     if a<.001:
-        a=.5
-    plt.text(10/d,a*.7,c,fontsize=40,color='black',
+        a=.003
+        c+='\n\u2193'
+    plt.text(10/d,a*.7,c,fontsize=30,color='black',
              path_effects=[pe.withStroke(linewidth=6, foreground="white")])
     #plt.text(10/d,a*.7,c,fontsize=35,color='black')
+plt.text(.00025,.035,sule,color='white',fontsize=20)
 plt.xscale('log')
 plt.yscale('log')
-plt.ylim(5*10**-3,1)
+plt.ylim(2*10**-3,1)
 plt.savefig('lurker_points.png',bbox_inches='tight')
 plt.show()
