@@ -36,7 +36,7 @@ def make_subplot(ax,X,Y,Z,title=''):
     pcm = ax.pcolormesh(X, Y, Z,
                         cmap='jet_r', 
                         shading='nearest')
-    #fig.colorbar(pcm, ax=ax)
+    fig.colorbar(pcm, ax=ax)
     CS = ax.contour(X, Y, Z)
     ax.clabel(CS, inline=True,fontsize=10)
     
@@ -56,7 +56,7 @@ X=X[:,:,0]
 Y=Y[:,:,0]
 
 
-fig, axs = plt.subplots(1,3,figsize=(10,5))
+fig, axs = plt.subplots(1,3,figsize=(19,5))
 
 make_subplot(axs[0], X, Y, Z1,'f='+str(f1))
 make_subplot(axs[1], X, Y, Z2,'uniform')
